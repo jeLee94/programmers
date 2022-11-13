@@ -1,3 +1,3 @@
 function solution(n, numlist) {
-    return [...numlist].filter(x=> x%n==0)
+    return numlist.filter(x=> x%n===0)
 }
