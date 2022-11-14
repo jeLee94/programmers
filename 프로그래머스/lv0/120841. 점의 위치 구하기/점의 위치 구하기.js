@@ -1,14 +1,4 @@
 function solution(dot) {
-    if(dot[0]>0 && dot[1]>0){
-        return 1
-    }
-    else if(dot[0]<0 && dot[1]>0){
-        return 2
-    }
-    else if(dot[0]<0 && dot[1]<0){
-        return 3
-    }
-    else if(dot[0]>0 && dot[1]<0){
-        return 4
-    }
+    let mul = dot[0] * dot[1]
+    return dot[0] >0 ? (mul>0 ? 1 : 4) : (mul>0?3:2)
 }
