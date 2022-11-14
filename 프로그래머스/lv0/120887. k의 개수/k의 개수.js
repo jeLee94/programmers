@@ -1,7 +1,7 @@
 function solution(i, j, k) {
-    let cnt = 0
-    for(let x=i;x<=j;x++){
-        [...String(x)].map(x=>x.match(String(k))?cnt++:false)
+    let a= ''
+    for(i;i<=j;i++){
+        a += i
     }
-    return cnt
+    return a.split(k).length-1
 }
