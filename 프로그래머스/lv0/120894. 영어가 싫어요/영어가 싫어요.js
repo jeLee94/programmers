@@ -3,7 +3,7 @@ function solution(numbers) {
     
     for(let idx in engs){
         if(numbers.includes(engs[idx])){
-            numbers = numbers.split(engs[idx]).join(idx)
+            numbers = numbers.replaceAll(engs[idx],idx)
         }
     }
     
