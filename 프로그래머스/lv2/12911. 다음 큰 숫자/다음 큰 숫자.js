@@ -1,8 +1,5 @@
-function solution(n) {
+function solution(n, next=n+1) {
     
-const count = n.toString(2).match(/1/g).length
-    while(true){
-        n += 1
-        if(n.toString(2).match(/1/g).length === count) return n  
-    }
+    return n.toString(2).match(/1/g).length === next.toString(2).match(/1/g).length ? next : solution(n,next+1)
+
 }
