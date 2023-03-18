@@ -1,8 +1,6 @@
 function solution(participant, completion) {
-    participant.sort()
-    completion.sort()
-    for(let i=0; i<participant.length;i++){
-        if(completion[i] !== participant[i]) return participant[i]
-    }
-    
+    completion.map(person=> {if(participant.includes(person))
+    {let idx = participant.findIndex(item=> item===person)
+    participant.splice(idx,1)}})
+    return String(participant)
 }
