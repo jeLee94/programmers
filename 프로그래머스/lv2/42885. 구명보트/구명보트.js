@@ -1,16 +1,15 @@
 function solution(people, limit) {
     let count =0;
     people.sort((a,b)=>a-b)
-    let k =0
-    while(people.length>0 && k<people.length){
-        if(people[k] + people[people.length-1] > limit){
+    while(people.length>0){
+        if(people[0] + people[people.length-1] > limit){
             count++
             people.pop()
         }
-        else if(people[k] + people[people.length-1] <= limit){
+        else{
             count++
             people.pop()
-            people.splice(k,1)
+            people.splice(0,1)
         }
     }
     return count
