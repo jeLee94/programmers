@@ -1,3 +1,3 @@
 function solution(flo) {
-    return Number(String(flo).split('.')[0])
+    return Math.floor(flo)
 }
